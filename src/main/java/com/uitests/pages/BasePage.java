@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.Objects;
-import java.util.Set; // Corrected import
+import java.util.Set; 
 public abstract class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -54,7 +54,7 @@ public abstract class BasePage {
 
     @Step("Scrolling element into view and clicking: {elementDescription}")
     protected void scrollAndClick(WebElement element, String elementDescription) {
-        // Conceptual Step-Level Retry Example:
+       
         int attempts = 0;
         int maxAttempts = 3; // Max attempts for this specific step
         while (attempts < maxAttempts) {
@@ -77,7 +77,7 @@ public abstract class BasePage {
 
     @Step("Clicking element using JavaScript: {elementDescription}")
     protected void jsClick(WebElement element) {
-        // Conceptual Step-Level Retry Example for jsClick:
+     
         int attempts = 0;
         int maxAttempts = 2;
         while(attempts < maxAttempts) {
