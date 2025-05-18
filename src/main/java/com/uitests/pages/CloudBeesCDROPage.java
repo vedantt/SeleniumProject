@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 public class CloudBeesCDROPage extends BasePage {
     private static final Logger logger = LoggerFactory.getLogger(CloudBeesCDROPage.class);
 
-    // More robust selector for the cost savings value, looking for the specific text within a relevant section
+
     @FindBy(xpath = "//span[normalize-space()='$2m']")
     private WebElement costSavingsValueElement;
 
