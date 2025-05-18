@@ -18,7 +18,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//button[contains(text(),'Products')]")
     private WebElement productsMenuButton;
 
-    // This XPath is more specific to the CD/RO link within the products dropdown
+
     @FindBy(xpath = "//a[contains(@href, '/products/cloudbees-cdro') and contains(text(), 'CloudBees CD/RO')]")
     private WebElement cloudbeesCDROLink;
 
@@ -30,7 +30,7 @@ public class HomePage extends BasePage {
 
 
     public HomePage() {
-        super(); // Calls BasePage constructor
+        super(); 
     }
 
     @Step("Navigate to CloudBees Homepage")
@@ -89,7 +89,7 @@ public class HomePage extends BasePage {
         jsClick(documentationLink);
         //scrollAndClick(documentationLink, "Documentation Link");
         logger.info("Clicked 'Documentation' link.");
-        // New tab handling will be in the test or a utility, page should focus on its elements
+       
         return new DocumentationPage();
     }
 }
