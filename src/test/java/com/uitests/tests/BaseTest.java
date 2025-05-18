@@ -23,7 +23,7 @@ public abstract class BaseTest {
 
 
     @BeforeMethod
-    @Parameters("browser") // Optional: To pass browser from testng.xml
+    @Parameters("browser") 
     public void setUp(@Optional("chrome") String browser, Method method) { // Default to chrome if not specified
         System.setProperty("browser", browser); // Set system property for DriverManager
         logger.info("--------------------------------------------------------------------------------");
